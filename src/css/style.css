@@ -11,18 +11,22 @@
 }
 
 h1 {
-  margin-left: 30px;
   color: var(--color-letra);
+  margin: 15px;
 }
 
 main {
-  margin-top: 150px;
+  margin-top: 100px;
+}
+
+.logoNil{
+  width: 80px;
+  height: 80px;
 }
 
 header {
   z-index: 100;
   background-color: #000;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -45,15 +49,20 @@ nav ul {
   font-size: 20px;
   font-weight: bold;
 }
+
+nav ul li{
+  list-style: none;
+}
+
 nav ul li a {
   color: white;
 }
 
 a.selected {
-  color: var(--color-letra);
+  color: var(--color-letra) !important;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, .enlaces-pagina ul li a:hover {
   color: var(--color-letra);
   cursor: pointer;
 }
@@ -63,6 +72,8 @@ nav ul li a:hover {
   gap: 30px;
   font-size: 20px;
   margin-right: 20px;
+  margin-left: 10px;
+  padding: 5px;
 }
 .redes a {
   color: white;
@@ -85,7 +96,7 @@ nav ul li a:hover {
 }
 
 .presentacion {
-  height: 100vh;
+  height: 1000px;
   margin: auto;
   color: white;
   display: flex;
@@ -105,15 +116,16 @@ nav ul li a:hover {
   color: var(--color-letra);
 }
 .presentacion a {
-  color: white;
+  color: black;
   text-decoration: none;
   border: 2px white solid;
-  border-radius: 50px;
   padding: 20px;
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 500px;
   transition: 0.4s;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 88% 86%, 75% 100%, 46% 90%, 0 100%);
+  background-color: white;
 }
 .presentacion a:hover {
   background-color: var(--color-letra);
@@ -122,9 +134,30 @@ nav ul li a:hover {
 
 /*Seccion Últimos Conciertos*/
 #conciertos {
-  padding: 60px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/proximosConciertos.jpg");
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 80px;
+  overflow: hidden; 
+  background-color: black;
+  z-index: 1;
 }
+
+#conciertos::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/proximosConciertos.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  z-index: -1; 
+}
+
 #conciertos h3 {
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -140,12 +173,13 @@ nav ul li a:hover {
   display: grid;
   margin-top: 100px;
   margin-bottom: 100px;
+  z-index: 1;
 }
 
 .concierto {
   text-align: center;
   cursor: pointer;
-  background-color: #fff;
+  background-color: black;
   border-radius: 10px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -154,6 +188,8 @@ nav ul li a:hover {
   display: block;
   width: 70%;
   margin: auto;
+  border: 2px solid white;
+  z-index: 2;
 }
 .concierto:hover {
   box-shadow: 0 0 10px black;
@@ -167,13 +203,27 @@ nav ul li a:hover {
 /*Sección NuevoAlbum*/
 #nuevoAlbum {
   position: relative;
+  color: white;
+  text-align: center;
+  padding: 80px;
+  overflow: hidden; 
+  background-color: black;
+  z-index: -1;
+}
+
+#nuevoAlbum::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/nuevoAlbum.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: white;
-  text-align: center;
-  padding: 80px;
+  clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+  z-index: -1; 
 }
 #nuevoAlbum h3 {
   margin-top: 40px;
@@ -213,6 +263,8 @@ nav ul li a:hover {
   height: 6px;
   animation: crecimientoBarraCancion 2s forwards;
 }
+
+
 
 @keyframes crecimientoBarraCancion {
   0% {
@@ -264,16 +316,16 @@ nav ul li a:hover {
 }
 #contacto .contenedor-form .btn {
   width: auto;
-  border: 1px solid black;
   margin: auto;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
   color: black;
-  border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
+  height: 50px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 88% 86%, 75% 100%, 46% 90%, 0 100%);
 }
 #contacto .contenedor-form .btn:hover {
   background-color: black;
@@ -370,14 +422,15 @@ nav ul li a:hover {
   padding: 15px;
 }
 .disco .info {
-  font-size: 20px;
+  font-size: 15px;
   width: 70%;
   text-align: center;
   line-height: 2;
+  /* gap: 10px; */
+  display: flex;
+  flex-direction: column;
 }
 .disco img {
-  max-width: 350px;
-  height: auto;
   padding: 20px;
   width: 30%;
   margin: 20px;
@@ -402,6 +455,7 @@ nav ul li a:hover {
   margin-left: 100px;
 }
 
+
 .disco2 {
   background-image: linear-gradient(rgba(1, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(../images/foto_album_2.jpg);
   background-position: center;
@@ -414,6 +468,20 @@ nav ul li a:hover {
   background-position: center;
   background-size: 60%;
   margin-left: 100px;
+}
+
+.discoDestacada{
+  width: 80%;
+  display: flex;
+  gap: 10px;
+}
+
+.discoDestacada .disco{
+  flex: 0 0 70%;
+}
+
+.discoDestacada .destacadas{
+  flex: 0 0 30%;
 }
 
 .noticia img {
@@ -528,7 +596,25 @@ cite {
 }
 
 /*Página Presentación*/
+
+
+    /* Estilos para el SVG animado */
+
+    .animated-line line {
+      stroke-dasharray: 150;
+      stroke-dashoffset: 0;
+      animation: move-line 3s linear infinite;
+    }
+
+    @keyframes move-line {
+      to {
+          stroke-dashoffset: -700;
+      }
+    }
+
+
 #presentacion h2 {
+  text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
   color: var(--color-letra);
@@ -634,19 +720,28 @@ cite {
 footer {
   background-color: black;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   color: white;
   padding: 30px;
   font-size: 18px;
   gap: 10px;
 }
+footer .enlaces-pagina ul{
+  display: flex;
+  gap: 10px;
+}
+footer .enlaces-pagina ul li a{
+  text-decoration: none;
+  color: white;
+}
+
 footer .redes-sociales ul {
   display: flex;
   gap: 15px;
 }
-footer .redes-sociales ul li {
+footer .redes-sociales ul li,
+  footer .enlaces-pagina ul li {
   list-style: none;
   color: white;
 }
@@ -665,19 +760,21 @@ footer .redes-sociales ul li a i {
     color: var(--color-letra);
     font-size: 25px;
   }
-  .contenido-header {
+  header {
     display: flex;
     width: 100%;
   }
   .responsive {
     background-color: #000;
     width: 100%;
-    padding: 12px 0;
-    display: block;
-    position: absolute;
-    top: 70px;
+    height: 200px;
+    display: flex;
+    position: fixed;
+    top: -420px;
     bottom: 20px;
+    justify-content: end;
     left: 0;
+ 
   }
   .responsive ul {
     text-align: center;
@@ -727,8 +824,35 @@ footer .redes-sociales ul li a i {
   #contacto .contenedor-form .mitad input {
     margin: 15px auto;
   }
+  .disco{
+    display: block;
+  }
+
+  .disco .info{
+    width: 100%;
+  }
+
+  .disco img{
+    width: 70%;
+    margin: auto;
+    display: flex;
+  }
   .disco a {
     display: block;
+    width: 60%;
+  }
+
+  .discoDestacada{
+    display: block;
+  }
+
+  .discoDestacada .destacadas{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
   }
   .info-album {
     display: block;
@@ -752,6 +876,10 @@ footer .redes-sociales ul li a i {
   footer .redes-sociales {
     display: none;
   }
+
+  footer .enlaces-pagina ul{
+    display: block;
+  }
 }
 /* Estilos para pantallas medianas */
 @media screen and (min-width: 801px) and (max-width: 1200px) {
@@ -769,4 +897,3 @@ footer .redes-sociales ul li a i {
   }
 }
 
-/*# sourceMappingURL=style.css.map */

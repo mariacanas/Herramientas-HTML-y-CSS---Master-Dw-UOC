@@ -11,7 +11,9 @@
 <body>
 
     <header>
-        <h1>Nil Moliner</h1>               
+        <img class="logoNil" src="images/LogoNilMoliner.png" alt="Logo Nil Moliner">    
+        <h1>Nil Moliner</h1>
+                       
         <nav id="nav" class="responsive">
             <ul>
                 <li><a href="index.html">Portada</a></li>
@@ -34,6 +36,8 @@
     </header>
 
     <main>
+
+
         <section id="premiosCanciones">
             <h2>Premios</h2>
             <ul>
@@ -46,6 +50,7 @@
         <section id="discografia" >
             <h2>Discografía de Nil Moliner</h2>
             <div class="disco disco1" data-aos="fade-right">
+                <img src="./images/foto_album_1_1.jpg" alt="Disco 1">
                 <div class="info">
                     <h3>Bailando en la batalla</h3>
                     <p>Año de lanzamiento: 2018</p>
@@ -55,23 +60,40 @@
                 <img src="./images/foto_album_1.jpg" alt="Portada Disco 1">
             </div>
             <div class="disco disco2">
-                <img src="./images/foto_album_1.jpg" alt="Portada Disco 2">
+                <img src="./images/foto_album_2.jpg" alt="Portada Disco 2">
                 <div class="info">
                     <h3>El Despertar</h3>
                     <p>Año de lanzamiento: 2020</p>
                     <a href="#">Escuchar en Spotify</a>
                     <a href="#">Ver Canciones</a>
                 </div>
+                <img src="./images/foto_album_2_1.jpg" alt="Disco 2">
             </div>
-            <div class="disco disco3">
-              <div class="info">
-                <h3>Lugar Paraíso</h3>
-                <p>Año de lanzamiento: 2024</p>
-                <a href="#">Escuchar en Spotify</a>
-                <a href="detalles1Album.html">Ver Canciones</a>
+
+            <div class="discoDestacada">
+                <div class="disco disco3">
+                    <div class="info">
+                      <h3>Lugar Paraíso</h3>
+                      <p>Año de lanzamiento: 2024</p>
+                      <a href="#">Escuchar en Spotify</a>
+                      <a href="detalles1Album.html">Ver Canciones</a>
+                    </div>
+                    <img src="./images/foto_album_3.jpg" alt="Portada Disco 3">
+                </div>
+                <div class="destacadas">
+                    <picture>
+                        <source media="(max-width: 800px)" srcset="./images/NilMolinerMedio.png">
+                        <source media="(max-width: 1000px)" srcset="./images/NilMolinerPequeno.png">
+                        <img src="./images/destacadaNil.png" alt="Nuevo Álbum" id="featured-image">
+                    </picture>
+                    <picture>
+                        <source media="(max-width: 800px)" srcset="./images/destacadaNil.png">
+                        <source media="(max-width: 1000px)" srcset="./images/NilMolinerMedio.png">
+                        <img src="./images/NilMolinerPequeno.png" alt="Nuevo Álbum" id="featured-image">
+                    </picture>
               </div>
-              <img src="./images/foto_album_3.jpg" alt="Portada Disco 3">
             </div>
+            
         </section>
           
         <section class="recortesprensa">
@@ -116,7 +138,18 @@
     </main>
 
     <footer>
-        <p>Todos los derechos reservados</p>
+        <img class="logoNil" src="images/LogoNilMoliner.png" alt="Logo Nil Moliner">
+        
+        <div class="enlaces-pagina">
+                <ul>
+                <li><a href="index.html" >Portada</a></li>
+                <li><a href="presentacion.html" >Presentación</a></li>
+                <li><a href="#" class="selected">Categoria</a></li>
+                <li><a href="enlaces.html" >Enlaces</a></li>
+            </ul>
+        </div>
+        
+
         <div class="redes-sociales">
             <ul>
                 <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
@@ -126,7 +159,7 @@
         </div>
    </footer>
 
-   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>

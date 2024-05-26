@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presentacion - Nil Moliner</title>
     <link rel="stylesheet" href="css/style.css" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
     
     <header>
-        <h1>Nil Moliner</h1>   
+        <img class="logoNil" src="images/LogoNilMoliner.png" alt="Logo Nil Moliner">    
+        <h1>Nil Moliner</h1>
+         
         <nav id="nav" class="responsive">
             <ul>
                 <li><a href="index.html">Portada</a></li>
@@ -34,10 +35,15 @@
     </header>
 
     <main id="presentacion">
-
+        
         
         <section id="presentacioninicio" data-aos="fade-right" data-aos-duration="1000">
-            <h2>Descubre a Nil Moliner</h2>
+            <h2>Descubre a Nil Moliner
+                <svg class="animated-line" width="100%" height="15">
+                    <line x1="0" y1="5" x2="100%" y2="5" stroke="red" stroke-width="4" />
+                </svg>
+            </h2>
+            
             <p>Bienvenidos a la página dedicada a Nil Moliner, un músico y compositor español.</p>
             <p>En este sitio vas a conocer mejor a Nil Moliner, descubriendo sus inicios, canciones y albunes. </p>
 
@@ -53,7 +59,11 @@
         </section>
 
         <section id="biografia">
-            <h2>Biografía</h2>
+            <h2>Biografía
+                <svg class="animated-line" width="100%" height="15">
+                    <line x1="0" y1="5" x2="100%" y2="5" stroke="red" stroke-width="4" />
+                </svg>
+            </h2>
 
             <p>Nil Moliner, nacido el 18 de Octubre de 1992, es un músico y compositor español conocido por su estilo pop. 
                 Desde bien pequeño siempre ha mostrado interés por la música, tanto es así que aprendrió a tocar la guitarra 
@@ -81,7 +91,11 @@
         </section>
 
         <section id="datosCuriosos">
-            <h2>Datos curiosos</h2>
+            <h2>Datos curiosos
+                <svg class="animated-line" width="100%" height="15">
+                    <line x1="0" y1="5" x2="100%" y2="5" stroke="red" stroke-width="4" />
+                </svg>
+            </h2>
 
             <ol>
                 <li>Nil Moliner nació Barcelona, España</li>
@@ -100,7 +114,11 @@
         </section>
 
         <section id="colaboraciones" data-aos="fade-right">
-            <h2>Colaboraciones</h2>
+            <h2>Colaboraciones
+                <svg class="animated-line" width="100%" height="15">
+                    <line x1="0" y1="5" x2="100%" y2="5" stroke="red" stroke-width="4" />
+                </svg>
+            </h2>
 
             <ul>
                 <li><strong>Artista: </strong> Despistaos - <strong>Canción: </strong> "Paredes"</li>
@@ -122,7 +140,18 @@
     </main>
 
     <footer>
-        <p>Todos los derechos reservados</p>
+        <img class="logoNil" src="images/LogoNilMoliner.png" alt="Logo Nil Moliner">
+        
+        <div class="enlaces-pagina">
+                <ul>
+                <li><a href="index.html" >Portada</a></li>
+                <li><a href="#" class="selected">Presentación</a></li>
+                <li><a href="categoria.html">Categoria</a></li>
+                <li><a href="enlaces.html">Enlaces</a></li>
+            </ul>
+        </div>
+        
+
         <div class="redes-sociales">
             <ul>
                 <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
@@ -132,7 +161,7 @@
         </div>
    </footer>
 
-   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
